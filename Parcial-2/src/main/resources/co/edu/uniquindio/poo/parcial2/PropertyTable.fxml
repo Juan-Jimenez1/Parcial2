@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600" prefWidth="622.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial2.viewController.PropertyViewController">
+    <Label layoutX="186.0" layoutY="36.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Property management" />
+
+    <TableView fx:id="propertyTable" layoutX="101.0" layoutY="100.0" prefHeight="400.0" prefWidth="425.0">
+        <columns>
+            <TableColumn fx:id="typeColumn" prefWidth="109.20001220703125" text="Type" />
+            <TableColumn fx:id="cityColumn" prefWidth="84.0" text="City" />
+            <TableColumn fx:id="roomsColumn" prefWidth="78.199951171875" text="Rooms" />
+            <TableColumn fx:id="floorsColumn" prefWidth="69.800048828125" text="Floors" />
+            <TableColumn fx:id="priceColumn" prefWidth="82.39998779296877" text="Price" />
+
+        </columns>
+    </TableView>
+   <Button layoutX="270.0" layoutY="522.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Return" />
+
+</AnchorPane>
