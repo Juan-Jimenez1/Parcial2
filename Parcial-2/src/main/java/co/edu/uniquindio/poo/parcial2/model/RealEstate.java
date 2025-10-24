@@ -7,7 +7,7 @@ public class RealEstate {
     private String nit;
     private ArrayList<Property> properties;
     private static RealEstate instance;
-// patrón de diseño Singleton para que sólo exista una instancia de la inmobiliaria.
+// Singleton design pattern to have just one instance of "RealEstate".
 
     private RealEstate() {
         this.name = "Inmobiliaria ";
@@ -51,24 +51,16 @@ public class RealEstate {
         properties.add(property);
     }
 
-   //public boolean updateProperty(String type, String city, int rooms, int floors, double price, String id){
-        //if(){}
+    public boolean deleteProperty(String id) {
+        for (int i = 0; i < properties.size(); i++) {
+            if (properties.get(i).getId().equals(id)) {
+                properties.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 
-//   public void deleteProperty(String id){
-//        for(int i=0;i<properties.size();i++){
-//            if()
-//        }
-//   }
-   //}
-//   public void eliminarLibroDigital(String titulo) {
-//       for(int i=0;i<biblioteca.getListLibrosDigitales().size();i++){
-//           if(biblioteca.getListLibrosDigitales().get(i).getTitulo().equalsIgnoreCase(titulo)){
-//               biblioteca.getListLibrosDigitales().remove(i);
-//               biblioteca.actualizarListaLibros();
-//               break;
-//           }
-//       }
-//   }
 }
 
 

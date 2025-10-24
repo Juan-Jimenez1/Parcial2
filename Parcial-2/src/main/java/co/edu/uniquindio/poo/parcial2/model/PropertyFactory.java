@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.parcial2.model;
 
-// Patrón de diseño factory para crear las propiedades.
+// factory design pattern to create properties.
 
 public class PropertyFactory {
     public static Property propertyFactory(String type,String city, int rooms, int floors, double price, String id){

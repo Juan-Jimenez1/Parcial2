@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.parcial2.model;
 
-//Patrón de diseño builder. ingles
+//Builder design pattern
 
 public class Property {
     private String id;
