@@ -1,6 +1,6 @@
 package co.edu.uniquindio.poo.parcial2.viewController;
 
-import co.edu.uniquindio.poo.parcial2.App;
+import co.edu.uniquindio.poo.parcial2.app.App;
 import co.edu.uniquindio.poo.parcial2.controller.PropertyController;
 import co.edu.uniquindio.poo.parcial2.model.Property;
 import javafx.collections.FXCollections;
@@ -67,7 +67,7 @@ public class PropertyViewController {
     @FXML
     public void setApp(App app) {
         this.app= app;
-        propertyController = new PropertyController(App.realEstate);
+        propertyController = new PropertyController(App.realEstate,App.realEstateFacade);
         initView();
     }
 
@@ -78,6 +78,28 @@ public class PropertyViewController {
         roomsColumn.setCellValueFactory(celda -> new javafx.beans.property.SimpleIntegerProperty(celda.getValue().getRooms()).asObject());
         floorsColumn.setCellValueFactory(celda -> new javafx.beans.property.SimpleIntegerProperty(celda.getValue().getFloors()).asObject());
         priceColumn.setCellValueFactory(celda -> new javafx.beans.property.SimpleDoubleProperty(celda.getValue().getPrice()).asObject());
+    }
+
+    @FXML
+    private void onDelete() {
+        Property selectedProperty = propertyTable.getSelectionModel().getSelectedItem();
+        if (selectedProperty != null) {
+            listProperties.remove(selectedProperty);
+            propertyController.deleteProperty(selectedProperty.getId());
+        } else {
+            mostrarAlerta("Warning", "No property selected");
+        }
+    }
+
+    public void onReturn(){
+        app.openViewPrincipal();
+    }
+
+    public void mostrarAlerta(String titulo, String mensaje) {
+        javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.WARNING);
+        alert.setTitle(titulo);
+        alert.setContentText(mensaje);
+        alert.showAndWait();
     }
 
 

@@ -16,6 +16,7 @@
 
         </columns>
     </TableView>
-   <Button layoutX="270.0" layoutY="522.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Return" />
+   <Button layoutX="143.0" layoutY="522.0" mnemonicParsing="false" onAction="#onReturn" prefHeight="42.0" prefWidth="86.0" text="Return" />
+   <Button fx:id="btnDelete" layoutX="397.0" layoutY="522.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="86.0" text="Delete" onAction="#onDelete"/>
 
 </AnchorPane>
