@@ -6,9 +6,9 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial2.viewController.PrincipalViewController">
    <children>
       <Pane layoutY="1.0" prefHeight="400.0" prefWidth="601.0">
-          <Label layoutX="180.0" layoutY="97.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Gestión Libros Físicos" />
-         <Button fx:id="btnPropertiesTable" layoutX="166.0" layoutY="188.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="111.0" text="Properties Table" onAction="#onOpenTableProperty"/>
-         <Button fx:id="btnFormProperty" layoutX="310.0" layoutY="188.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="111.0" text="Form Property" onAction="#onOpenForm"/>
+          <Label layoutX="239.0" layoutY="97.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Real Estate" />
+         <Button fx:id="btnPropertiesTable" layoutX="166.0" layoutY="188.0" mnemonicParsing="false" onAction="#onOpenTableProperty" prefHeight="52.0" prefWidth="111.0" text="Properties Table" />
+         <Button fx:id="btnFormProperty" layoutX="310.0" layoutY="188.0" mnemonicParsing="false" onAction="#onOpenForm" prefHeight="52.0" prefWidth="111.0" text="Form Property" />
       </Pane>
    </children>
 </AnchorPane>
