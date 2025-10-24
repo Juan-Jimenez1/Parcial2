@@ -3,6 +3,7 @@
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.parcial2.viewController.FormViewController">
 
     <AnchorPane>
@@ -16,7 +17,7 @@
             </VBox.margin>
          </Label>
              <TextField fx:id="textFieldPropertyId" promptText="Property id" />
-         <ComboBox fx:id="comboBoxProperties" prefHeight="26.0" prefWidth="314.0">
+         <ComboBox fx:id="comboBoxProperties" prefHeight="26.0" prefWidth="314.0" promptText="Property Type">
 
             <VBox.margin>
                <Insets left="70.0" />
@@ -38,6 +39,6 @@
          </Button>
          </children>
      </VBox>
-   <Button fx:id="btnReturn" layoutX="520.0" layoutY="351.0" mnemonicParsing="false" text="Return" onAction="#onReturn" />
+   <Button fx:id="btnReturn" layoutX="520.0" layoutY="351.0" mnemonicParsing="false" onAction="#onReturn" text="Return" />
 
 </AnchorPane>
